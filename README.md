@@ -9,9 +9,9 @@
        git clone https://github.com/(YOUR_USERNAME)/icefeet-2020.git
        cd icefeet-2020
        
-  This command will take you to the folder containing the code.
-  Currently you are on your master branch. Inorder to contribute to my repo, you need to work on another branch in your
-  repository.
+   This command will take you to the folder containing the code.
+   Currently you are on your master branch. Inorder to contribute to my repo, you need to work on another branch in your
+   repository.
 
 3. This command set this repo as your upstream repository in order to make pull requests and get further changed codes.
  
