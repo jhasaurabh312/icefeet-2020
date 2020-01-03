@@ -1,8 +1,8 @@
 # To contribute in this repository, perform the following steps.
 
-1. Fork this repository.
+1. Fork this repository(by clicking the fork button above).
 
-Now run the following code in your terminal/prompt : 
+   Now run the following code in your terminal/prompt : 
 
 2. Clone the forked repository(the repository made in your account after you forked this repo) by running this command
 
@@ -36,7 +36,7 @@ Now run the following code in your terminal/prompt :
 
    By doing this step, you have pushed your updated code on the develop branch of your repository.
 
-7.Make a pull request from your repo to this(original) repo.
+7. Make a pull request from your repo to this(original) repo.
 
        Click on the green pull request button.
        Base repository : THIS REPOSITORY.    Base : MASTER
