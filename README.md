@@ -1,8 +1,8 @@
-To contribute in this repository, perform the following steps.
+# To contribute in this repository, perform the following steps.
 
 1. Fork this repository.
 
-# Now run the following code in your terminal/prompt : 
+Now run the following code in your terminal/prompt : 
 
 2. Clone the forked repository(the repository made in your account after you forked this repo) by running this command
 
@@ -54,7 +54,7 @@ To contribute in this repository, perform the following steps.
       
       
       
-       *****  KEEP CONTRIBUTING AND HAPPY CODING   ********    
+.............................................................................................................................
           
           
    
