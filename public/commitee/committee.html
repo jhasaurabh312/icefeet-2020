@@ -79,9 +79,9 @@
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- <link rel='stylesheet' id='pt-cv-public-style-css'  href='http://www.ee.IITM.ac.in/PEDES2018/wp-content/plugins/content-views-query-and-display-post-page/public/assets/css/cv.css?ver=1.9.7' type='text/css' media='all' /> -->
-    <!-- <link rel='stylesheet' id='dashicons-css'  href='http://www.ee.IITM.ac.in/PEDES2018/wp-includes/css/dashicons.min.css?ver=4.9.8' type='text/css' media='all' /> -->
-    <!-- <link rel='stylesheet' id='menu-icons-extra-css'  href='http://www.ee.IITM.ac.in/PEDES2018/wp-content/plugins/menu-icons/css/extra.min.css?ver=0.10.2' type='text/css' media='all' /> -->
+    <link rel='stylesheet' id='pt-cv-public-style-css' href='http://www.ee.IITM.ac.in/PEDES2018/wp-content/plugins/content-views-query-and-display-post-page/public/assets/css/cv.css?ver=1.9.7' type='text/css' media='all' />
+    <link rel='stylesheet' id='dashicons-css' href='http://www.ee.IITM.ac.in/PEDES2018/wp-includes/css/dashicons.min.css?ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='menu-icons-extra-css' href='http://www.ee.IITM.ac.in/PEDES2018/wp-content/plugins/menu-icons/css/extra.min.css?ver=0.10.2' type='text/css' media='all' />
     <link rel='stylesheet' id='cf7msm_styles-css' href='../css/css_three.css' type='text/css' media='all' />
     <link rel='stylesheet' id='cf7cf-style-css' href='../css/css_four.css' type='text/css' media='all' />
     <link rel='stylesheet' id='a3-pvc-style-css' href='../css/css_five.css' type='text/css' media='all' />
@@ -561,10 +561,6 @@
             color: #F7F7F7
         }
 
-        #dd {
-            padding-left: 60px;
-        }
-
         .columnmore a:hover {
             background: #359bbb;
         }
@@ -654,10 +650,6 @@
 
         .entry-content pre {
             border-color: #2784a2;
-        }
-
-        #address {
-            padding-left: 200px;
         }
 
         abbr,
@@ -926,23 +918,180 @@
         }
     </style>
     <style type="text/css">
-        /* Nirvana Custom CSS */
+        .rtbs {
+            margin: 20px 0
+        }
+
+        .rtbs .rtbs_menu ul {
+            list-style: none;
+            padding: 0!important;
+            margin: 0!important
+        }
+
+        .rtbs .rtbs_menu li {
+            display: inline-block;
+            padding: 0;
+            margin-left: 0;
+            margin-bottom: 0
+        }
+
+        .rtbs .rtbs_menu li a {
+            display: inline-block;
+            color: #333;
+            text-decoration: none;
+            padding: .7rem 30px;
+            box-shadow: 0 0 0
+        }
+
+        .rtbs .rtbs_menu li a.active {
+            position: relative;
+            color: #fff
+        }
+
+        .rtbs .rtbs_menu .mobile_toggle {
+            padding-left: 18px;
+            display: none;
+            cursor: pointer
+        }
+
+        .rtbs>.rtbs_content {
+            display: none;
+            padding: 23px 30px 1px;
+            background: #f9f9f9;
+            color: #333
+        }
+
+        .rtbs>.rtbs_content ol,
+        .rtbs>.rtbs_content ul {
+            margin-left: 20px
+        }
+
+        .rtbs>.active {
+            display: block
+        }
+
+        .entry-content .rtbs .rtbs_menu ul li {
+            margin: 0
+        }
+
+        .entry-content .rtbs .rtbs_menu ul li a {
+            border: none
+        }
+
+        .rtbs_full .rtbs_menu ul {
+            display: block;
+            border-bottom: 0;
+            overflow: hidden;
+            position: relative
+        }
+
+        .rtbs_full .rtbs_menu ul::after {
+            content: url(../img/dktbs_menu.png);
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            z-index: 2;
+            pointer-events: none
+        }
+
+        .rtbs_full .rtbs_menu ul li {
+            display: none;
+            padding-left: 30px;
+            background: #f1f1f1
+        }
+
+        .rtbs_full .rtbs_menu ul li a {
+            padding-left: 0;
+            font-size: 17px!important;
+            padding-top: 14px;
+            padding-bottom: 14px
+        }
+
+        .rtbs_full .rtbs_menu a {
+            width: 100%;
+            height: auto
+        }
+
+        .rtbs_full .rtbs_menu li.mobile_toggle {
+            display: block;
+            padding: 12px .5rem 12px 30px;
+            font-size: 17px;
+            color: #fff
+        }
+
+        .rtbs_tab_ori .rtbs_content,
+        .rtbs_tab_ori .rtbs_content a,
+        .rtbs_tab_ori .rtbs_content p,
+        .rtbs_tab_ori .rtbs_menu .mobile_toggle,
+        .rtbs_tab_ori .rtbs_menu a {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif!important;
+            font-weight: 300!important
+        }
     </style>
+
     <!-- <link rel="icon" href="https://www.ee.IITM.ac.in/PEDES2018/wp-content/uploads/2017/06/logo4-150x150.png" sizes="32x32" /> -->
     <!-- <link rel="icon" href="../image/nitlogo.png" sizes="192x192" />
 		<link rel="apple-touch-icon-precomposed" href="../image/nitlogo.png" />
 		<meta name="msapplication-TileImage" content="../image/nitlogo.png" /> -->
+    <script>
+        $j = jQuery.noConflict(), $j(document).ready(function() {
+            var t = {
+                backgroundColor: "transparent"
+            };
+            $j(".rtbs").each(function() {
+                var t = $j(this).find(".rtbs_color").html(),
+                    s = $j(this).find(".rtbs_breakpoint").html(),
+                    i = $j(this).width();
+                i > s ? ($j(this).removeClass("rtbs_full"), $j(this).find(".mobile_toggle").hide(), $j(this).find('.rtbs_menu li:not(".mobile_toggle")').show(), $j(this).find('.rtbs_menu li:not(".mobile_toggle")').css("display", "inline-block")) : ($j(this).addClass("rtbs_full"), $j(this).find('.rtbs_menu li:not(".mobile_toggle")').css("display", "block"), $j(this).find(".mobile_toggle").css("background", t), $j(this).find('.rtbs_menu li:not(".mobile_toggle")').hide())
+            }), $j(window).resize(function() {
+                var t;
+                $j(".rtbs").each(function() {
+                    var s = $j(this).find(".rtbs_breakpoint").html(),
+                        i = $j(this).width();
+                    clearTimeout(t), t = setTimeout(function() {
+                        i > s ? $j(this).removeClass("rtbs_full") : $j(this).addClass("rtbs_full")
+                    }, 10)
+                })
+            }), $j(".rtbs").each(function() {
+                var t = $j(this).find("a.active").text();
+                $j(this).find(".mobile_toggle").empty(), $j(this).find(".mobile_toggle").append(t)
+            }), $j(window).resize(function() {
+                $j(".rtbs").each(function() {
+                    var s = $j(this).find(".rtbs_breakpoint").html(),
+                        i = $j(this).find(".rtbs_color").html(),
+                        e = $j(this).width();
+                    e > s ? ($j(this).removeClass("rtbs_full"), $j(this).find(".mobile_toggle").hide(), $j(this).find('.rtbs_menu li:not(".mobile_toggle")').show(), $j(this).find('.rtbs_menu li:not(".mobile_toggle")').css("display", "inline-block"), $j(this).find(".rtbs_menu li > a").css(t), $j(this).find(".rtbs_menu li").find(".active").css("background", i)) : ($j(this).addClass("rtbs_full"), $j(this).find(".mobile_toggle").show(), $j(this).find(".mobile_toggle").css("background", i), $j(this).find('.rtbs_menu li:not(".mobile_toggle")').css("display", "block"), $j(this).find('.rtbs_menu li:not(".mobile_toggle")').hide())
+                })
+            }), $j(".mobile_toggle").click(function() {
+                var t = $j(this).closest(".rtbs").find(".rtbs_color").html();
+                return $j(this).parent().children("li").not(".rtbs_menu li.mobile_toggle").slideToggle(90), $j(this).siblings(".current").css("display", "none"), $j(this).css("background", t), $j(this).siblings().find("a").css("background", "#f1f1f1"), !1
+            }), $j(".rtbs_menu li > a").click(function() {
+                var s = $j(this).closest(".rtbs").find(".rtbs_color").html(),
+                    i = $j(this).closest(".rtbs").find(".rtbs_breakpoint").html(),
+                    e = $j(this).closest(".rtbs").width();
+                if (e > i) {
+                    $j(this).addClass("active"), $j(this).css("background", s), $j(this).parent().siblings().children().css(t), $j(this).parent().siblings().children().removeClass("active"), $j(this).closest(".rtbs").children(".rtbs_content").hide();
+                    var l = $j(this).attr("data-tab");
+                    $j(l).fadeToggle(0);
+                    var n = $j(this).closest(".rtbs").find("a.active").text();
+                    return $j(this).closest(".rtbs").find(".mobile_toggle").empty(), $j(this).closest(".rtbs").find(".mobile_toggle").append(n), $j(this).parent().siblings().removeClass("current"), $j(this).parent().addClass("current"), !1
+                }
+                $j(this).closest(".rtbs").find(".rtbs_menu li").css("display", "block"), $j(this).addClass("active"), $j(this).parent().siblings().children().removeClass("active"), $j(this).closest(".rtbs").find(".rtbs_content").hide();
+                var l = $j(this).attr("data-tab");
+                $j(l).fadeToggle(0), $j(this).closest(".rtbs").find(".rtbs_menu li").not(".mobile_toggle").slideToggle(0);
+                var n = $j(this).closest(".rtbs").find("a.active").text();
+                return $j(this).closest(".rtbs").find(".mobile_toggle").empty(), $j(this).closest(".rtbs").find(".mobile_toggle").append(n), $j(this).parent().siblings().removeClass("current"), $j(this).parent().addClass("current"), !1
+            })
+        });
+    </script>
 
 </head>
 
 <body class="home page-template-default page page-id-83 custom-background nirvana-image-one caption-simple nirvana-menu-left" style="overflow-x: hidden">
-
-
     <div id="wrapper" class="hfeed">
         <div id="topbar">
             <div id="topbar-inner"> </div>
         </div>
-
         <div id="header-full">
             <header id="header">
                 <div id="masthead">
@@ -965,16 +1114,16 @@
             <ul id="prime_nav" class="menu">
                 <li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-83 current_page_item menu-item-has-children menu-item-91"><a href="../home/home.html"><span><i class="_mi _before dashicons dashicons-admin-home" aria-hidden="true"></i><span>Home</span></span></a>
                     // <ul class="sub-menu">
-                    //     <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="../home/home.html"><span><i class="_mi _before dashicons dashicons-admin-collapse" aria-hidden="true"></i><span>About</span></span></a></li>
+                    //     <ul id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="../home/home.html"><span><!--<i class="_mi _before dashicons dashicons-admin-collapse" aria-hidden="true"></i>--><!--<span>About</span>--></span></a></ul>
                     // </ul>
                 </li>
-                <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="../../commitee/committee.html"><span><i class="_mi _before dashicons dashicons-groups" aria-hidden="true"></i><span>Committees</span></span></a></li>
+                <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="../commitee/committee.html"><span><i class="_mi _before dashicons dashicons-groups" aria-hidden="true"></i><span>Committees</span></span></a></li>
                 <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-98"><a href="#"><span><i class="_mi _before dashicons dashicons-format-standard" aria-hidden="true"></i><span>Papers</span></span></a>
                     <ul class="sub-menu">
                         <li id="menu-item-643" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-643"><a href="#"><span><i class="_mi _before dashicons dashicons-admin-tools" aria-hidden="true"></i><span>Presentation Information</span></span></a>
                             <ul class="sub-menu">
 
-                                <li id="menu-item-645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="../../author/presentation.html"><span><i class="_mi _before dashicons dashicons-format-aside" aria-hidden="true"></i><span>Session Organization</span></span></a></li>
+                                <li id="menu-item-645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="../author/presentation.html"><span><i class="_mi _before dashicons dashicons-format-aside" aria-hidden="true"></i><span>Session Organization</span></span></a></li>
 
                             </ul>
                         </li>
@@ -987,10 +1136,9 @@
                 <li id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-338"><a href="../author/finalpaper.html"><span><i class="_mi _before dashicons dashicons-format-aside" aria-hidden="true"></i><span>Information for final paper submission</span></span></a></li>
                 </ul>
                 </li>
-
                 <li id="menu-item-661" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-661"><a href="#"><span><i class="_mi _before dashicons dashicons-menu" aria-hidden="true"></i><span>Registration</span></span></a>
                     <ul class="sub-menu">
-                        <li id="menu-item-660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-660"><a href="../../registration/online.html"><span><i class="_mi _before dashicons dashicons-menu" aria-hidden="true"></i><span>Registrations</span></span></a></li>
+                        <li id="menu-item-660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-660"><a href="../registration/online.html"><span><i class="_mi _before dashicons dashicons-menu" aria-hidden="true"></i><span>Registrations</span></span></a></li>
                         // <li id="menu-item-658" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-658"><a href="../registration/offline.html"><span><i class="_mi _before dashicons dashicons-format-standard" aria-hidden="true"></i><span>Registration at the Venue</span></span></a></li>
                     </ul>
                 </li>
@@ -1002,10 +1150,8 @@
                                 <li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657"><a href="../program/certificate/certi.html"><span><i class="_mi _before dashicons dashicons-admin-page" aria-hidden="true"></i><span>Author/Participant Certificates</span></span></a></li>
                             </ul>
                         </li>
-
                         <li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="../program/industry_sessions/industry.html"><span><i class="_mi _before dashicons dashicons-image-flip-horizontal" aria-hidden="true"></i><span>Industry Sessions</span></span></a></li>
                         <li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="../program/Tutorials/tutorials.html"><span><i class="_mi _before dashicons dashicons-admin-page" aria-hidden="true"></i><span>Tutorial Program</span></span></a></li>
-
                         <li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="../program/final_schedule/finalschedule.html"><span><i class="_mi _before dashicons dashicons-format-aside" aria-hidden="true"></i><span>Final Conference Schedule</span></span></a></li>
                         <li id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a href="../program/keynote/keynote_speaker.html"><span><i class="_mi _before dashicons dashicons-admin-users" aria-hidden="true"></i><span>KeynoteTalks</span></span></a></li>
                     </ul>
@@ -1030,7 +1176,7 @@
 
                 <li id="menu-item-652" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-652"><a href="../notice/notice.html"><span><i class="_mi _before dashicons dashicons-menu" aria-hidden="true"></i><span>Annuouncements</span></span></a>
                     // <ul class="sub-menu">
-                    //     <li id="menu-item-653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-653"><a href="../notice/notice.html"><span><i class="_mi _before dashicons dashicons-format-chat" aria-hidden="true"></i><span>notice</span></span></a></li>
+                    //     <li id="menu-item-653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-653"><a href="../notice/notice.html"><span><i class="_mi _before dashicons dashicons-format-chat" aria-hidden="true"></i><span>Notice</span></span></a></li>
                     // </ul>
                 </li>
             </ul>
@@ -1039,7 +1185,6 @@
     </div>
     </header>
     </div>
-
     <div style="clear:both;height:0;"> </div>
     <div id="breadcrumbs">
         <div id="breadcrumbs-box">
@@ -1052,10 +1197,7 @@
             <span class="current">Welcome</span>
         </div>
     </div>
-
-
     <!--      main code -->
-
     <div id="main">
         <div id="toTop" style="bottom: -50px; opacity: 0;">
             <i class="icon-back2top"></i>
@@ -1067,47 +1209,210 @@
             <section id="container" class="three-columns-sided">
                 <!-- put your code here -->
                 <div id="content" role="main">
-
-                    <div id="post-114" class="post-114 page type-page status-publish hentry">
-                        <h1 class="entry-title">Venue</h1>
+                    <div id="post-19" class="post-19 page type-page status-publish hentry">
+                        <h1 class="entry-title">Committees</h1>
                         <div class="entry-content">
+                            <h4><span style="color: #993300;"><strong>Committees</strong></span></h4>
                             <hr>
-                            <h4><strong><span style="color: #800000;">Conference Venue</span></strong></h4>
-                            <hr>
-                            <p><img class="alignleft wp-image-31 size-thumbnail" src="" alt="NITP LOGO" width="150" height="150" srcset="https://www.ee.IITM.ac.in/PEDES2018/wp-content/uploads/2017/06/logo4-150x150.png 150w, ../image/nitlogo.png 200w" sizes="(max-width: 150px) 100vw, 150px"><br>
-                                <strong><h4 class="info">National Institute of Technology Patna</h4></strong>
-                                <h5 id="address">Ashok Raj Path, Patna-800 005, Bihar(India)</h5>
-                            </p>
+                            <div class="rtbs  rtbs_committee rtbs_full">
+                                <div class="rtbs_slug" style="display:none">committee</div>
+                                <div class="rtbs_breakpoint" style="display:none">600</div>
+                                <div class="rtbs_color" style="display:none">#a00308</div>
+                                <div class="rtbs_menu">
+                                    <ul>
+
+                                        <li class="current"><a style="background: transparent;" class="committee-tab-link-0" href="#" data-tab="#committee-tab-0">Organising Committee</a></li>
+                                        <li style="display: none;" class=""><a href="#" data-tab="#committee-tab-1" class="committee-tab-link-1 active" style="background: rgb(160, 3, 8);"> Technical Program Committee</a></li>
+                                        <li style="display: none;" class=""><a href="#" data-tab="#committee-tab-2" class="committee-tab-link-2">Advisory Committee</a></li>
+
+                                    </ul>
+                                </div>
+                                <div style="border-top: 7px solid rgb(160, 3, 8); display: none;" id="committee-tab-0" class="rtbs_content active">
+                                    <p><strong><span style="color: #003366;"></span></strong></p>
+                                    <div class="content-column one_half">
+
+                                        <p><span style="color: #993300;"><strong>Chief patron</strong></span></p>
+                                        <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. Pradip Kumar Jain, Director, NIT Patna</a></p>
+
+                                        <!--      -->
+
+                                        <p><span style="color: #993300;"><strong>Co-Patrons</strong></span></p>
+                                        <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. Jagada Nand Jha, Principal, MIT Muzaffarpur</a></p>
+                                        <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. G K Chaudhury, Pro-VC Patliputra University &amp; Professor, Dept. of EE, NIT
+												Patna</a></p>
+                                        <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. S K Verma, Dean-Academic, NIT Patna</a></p>
+                                        <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. Prakash Chandra, Dean-Student Affairs, NIT Patna</a></p>
+
+
+                                        <!--      -->
+
+
+                                        <p><span style="color: #993300;"><strong>General Chair:</strong></span></p>
+                                        <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. Ramesh Kumar, HOD, EE, NIT Patna</a></p>
+                                        <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Y. N. Sharma, HOD, EE, MIT Muzaffarpur</a></p>
+
+                                        <!--      -->
+
+                                        <strong><span style="color: #993300;">Convenor</span></strong>
+                                        <p style="padding-left: 30px;">
+                                            <i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Mala De, NIT PATNA</a><br>
+                                            <i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr Arunangshu Ghosh, NIT PATNA</a>
+                                        </p>
+
+
+                                        <p><span style="color: #993300;"><strong>Secretary</strong></span></p>
+                                        <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr Rajib Kumar Mondal, NIT PATNA</a></p>
+
+                                        <p><span style="color: #993300;"><strong>Joint Organizing Secretary</strong></span></p>
+                                        <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr Vimlesh Verma, NIT PATNA</a><br>
+                                            <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Dharmendra Kumar Dheer, NIT Patna</a><br>
+
+                                                <!--   -->
+
+
+                                                <p><span style="color: #993300;"><strong>General Co-Chair</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. Sehzad Ahsan, MIT Muzaffarpur</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Bikash Chandra Sahana, NIT PATNA</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Vimlesh Verma, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Ambarisha Mishra, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Dharmendra Kumar Dheer, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Nishat Anwar, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Ravi Shankar, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Sanjeev Kumar Mallik, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Dinesh Dash, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Amit Kumar Singh</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Manpuran Mahato</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Ashish Bhandari</a></p>
+
+                                                <!--   -->
+
+                                                <p><span style="color: #993300;"><strong>Technical Chairs</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Vimlesh Verma, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Nishat Anwar, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Ravi Shankar, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Sanjeev Kumar Mallik, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Ashish Kumar Bhandari, Dept of ECE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Akshay Deepak, Dept of CSE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Nimaipada Mondal, Dept of ME, NIT Patna</a></p>
+
+
+                                                <!--   -->
+                                                <p><span style="color: #993300;"><strong>Program/Steering Committee</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. A. K. Sahani, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Dharmendra Kr Dheer, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr.Sanjeev Kumar Mallik, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Amit Kumar, Dept of CSE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Manpuran Mahto, Dept of ECE, NIT Patna</a></p>
+
+
+                                                <!--   -->
+                                                <p><span style="color: #993300;"><strong>Local Hospitality Committee</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. Ashiwani Kumar, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Ruchi Agarwal, Dept of EE, NIT Patna</a></p>
+
+                                                <!--   -->
+                                                <p><span style="color: #993300;"><strong>Printing committee</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Ambarisha Mishra, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Sarifuddin Mondal, Dept of ME, NIT Patna</a></p>
+
+
+
+                                                <!--   -->
+                                                <p><span style="color: #993300;"><strong>Finance Committee</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Rajib Kumar Mandal, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Dharmendra Kr. Dheer, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. M.P. Singh, Dept of EE, NIT Patna</a></p>
+
+
+                                                <!--   -->
+                                                <p><span style="color: #993300;"><strong>Accommodation and Hospitality</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Rajib K Mandal, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Ravi Shankar, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Mr. S. Mukherjee, Dept of Physics, NIT Patna</a></p>
+
+                                                <!--   -->
+                                                <p><span style="color: #993300;"><strong>Registration Committee</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Moina Ajmeri, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Prof. Ashiwani Kumar, Dept of EE, NIT Patna</a></p>
+
+
+                                                <!--   -->
+                                                <p><span style="color: #993300;"><strong>Media and Publicity Chair(s)</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Vimlesh Verma, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. J P Singh, Dept of CSE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Samrat Mukherjee, Dept of Physics, NIT Patna</a></p>
+
+                                                <!--   -->
+                                                <p><span style="color: #993300;"><strong>Women Cell</strong></span></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Moina Ajmeri, Dept of EE, NIT Patna</a></p>
+                                                <p style="padding-left: 30px;"><i class="wp-svg-globe globe"></i><a href="" rel="noopener noreferrer">Dr. Sangita Singh, Dept of ECE, NIT Patna</a></p>
+
+
+                                    </div>
+                                    <div class="clear_column"></div>
+                                    <div style="margin-top:30px; clear:both;"></div>
+                                </div>
+
+
+
+                                <div style="border-top: 7px solid rgb(160, 3, 8); display: none;" id="committee-tab-2" class="rtbs_content">
+
+                                    <!-- <hr>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Ramesh Bansal, Professor, University of Sharjah</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Aatif Iqbal, Professor, Qatar University</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Akshay Rathod, Associate Professor, Concordia University</div>
+									 -->
+                                    <p>To be updated soon</p>
+                                    <div style="margin-top:30px; clear:both;"></div>
+                                </div>
+
+
+
+
+                                <div style="border-top: 7px solid rgb(160, 3, 8); display: block;" id="committee-tab-1" class="rtbs_content">
+                                    <!--<p>
+								     <div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Sunetra Chowdhury</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Saikat Chakravarty, Professor, IIT Kanpur</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Paresh Nayak, Assistant Professor, IIT ISM-Dhanbad</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Amitabha Chatterjee, Professor, Jadavpur University, Kolkata</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Debashish Chattopadhyay, Professor, Jadavpur University, Kolkata</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Bipan Tudu, Professor, Jadavpur University, Kolkata</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Palash Kumar Kundu, Professor, Jadavpur University, Kolkata</div>
+									<div class="gmail_default">Prof. Sovan Dalai</div>
+									<div class="gmail_default">Prof. Debangshu Dey, Jadavpur University</div>
+									<div class="gmail_default">Prof. Vivekananda Mukherjee, Associate Professor, IIT-ISM, Dhanbad</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. S.K. Parida, Associate Professor, IIT Patna</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. R.K. Behera, Associate Professor, IIT Patna</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. S. Sivasubramani, Assistant Professor, IIT Patna</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Sunita Haldar (Dey), Professor, Jadavpur University, Kolkata</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Dr. Paromita Guha, Scientist, CSIO-Chandigarh</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Pankaj Mukhija, Assistant Professor, NIT Delhi</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. B.K. Roy, Professor, NIT Silchar</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Nidul Sinha, Professor, NIT Silchar</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Subrata Banerjee, Professor, NIT Durgapur</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Indrani Kar, Associate Professor, IIT Guwahati</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. A.V. Ravi Teja, Assistant, IIT Ropar</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Sumit Chattopadhyay, Assistant Professor, IIT Delhi</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Pratim Kundu, Assistant professor, IIT Mandi</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Rahat Mehboob, Assistant Professor, Tezpur University</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Ravi Raushan, Assistant Professor, NIT Surathkal</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Adil Sarwar, Assistant Professor, Aligarh Muslim University</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Pradeep Kumar, Assistant Professor, NIT Sikkim</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Somnath Pan, Professor, IIT-ISM, Dhanbad</div>
+									<div class="gmail_default"><i class="wp-svg-globe globe"></i>Prof. Kalyan Chatterjee, Associate Professor, IIT-ISM, Dhanbad</div>
+
+								</p> -->
+                                    <p>To be updated soon</p>
+                                    <div style="margin-top:30px; clear:both;"></div>
+                                </div>
+                            </div>
+
                             <p>&nbsp;</p>
                             <hr>
-                            <h5 style="text-align: left;"><span style="color: #0f1011;"><strong>Direction to NIT Patna :</strong></span></h5>
-                            <hr>
-                            <p>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1538.7866509593368!2d85.17148240000004!3d25.6205723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58dce1098af7%3A0xd3ab2e3afc171805!2sNational+Institute+of+Technology+Patna!5e1!3m2!1sen!2s!4v1402950851850"
-                                    width="450" height="350" frameborder="0" id="mapIITM"></iframe>
-                            </p>
-                            <hr>
-                            <p><strong>Campus:</strong></p>
-                            <p>The main entrance of NIT PATNA is on patna's Ashok Rajpath. The campus is close to the banks of river Ganga.</p>
-                            <p>The campus is located 12&nbsp;km from the patna Airport, 8&nbsp;km from the patna junction, and is well connected by buses.</p>
-
-                            <p><strong>How to Reach: </strong></p>
-                            <p><strong><u>By road :</u></strong> Patna has a good road network link with various neighboring cities.Direct buses ply to Patna from cities like Bodhgaya, Ranchi, Siliguri ,and Rajgir. Reaching the campus of NIT Patna is very
-                                easy via road.</p>
-                            <p><strong><u>From the Airport:</u></strong> Various airlines operate direct flights to Jai Prakash Narayan International Airport, Patna.The NIT Patna is 20 km from the airport.One can hire an auto rickshaw, taxi or board a bus
-                                for reaching the institute.To locate airways connectivity to Patna</p>
-
-                            <p><strong><u>From rail:</u></strong>One can reach NIT, Patna through rail.There are ample numbers of trains to Patna Railway station.From the railway station, the institute’s campus is just 8 km away.One can hire an auto rickshaw,
-                                taxi or board a bus for reaching the institute.</p>
-                            <hr>
-                            <p>&nbsp;</p>
-
                         </div>
-                        <!-- .entry-content -->
                     </div>
-                    <!-- #post-## -->
 
-                    <!--  <div id="comments" class="hideme">  <p class="nocomments2">Comments are closed</p> </div><!-- #comments -->
+
                 </div>
                 <!-- code ends  -->
 
@@ -1136,13 +1441,13 @@
 						</div>
 						</li>
 
-						<li id="text-7" class="widget-container widget_text"><h3 class="widget-title"><span>Keynote and Industry Speakers</span></h3>			<div class="textwidget"><i class="wp-svg-globe globe"></i> <a href="https://www.ee.IITM.ac.in/~ashok/" target="_blank" rel="noopener noreferrer"> Ashok Jhunjhunwala,India</a><br>
+						<li id="text-7" class="widget-container widget_text"><h3 class="widget-title"><span>Keynote and Industry Speakers</span></h3>			<div class="textwidget"><i class="wp-svg-globe globe"></i> <a href="https://www.ee.IITM.ac.in/~ashok/"  rel="noopener noreferrer"> Ashok Jhunjhunwala,India</a><br>
 						<i class="wp-svg-globe globe"></i><a href="https://staffportal.curtin.edu.au/staff/profile/view/Arindam.Ghosh"> Arindam Ghosh</a><br>
-						<i class="wp-svg-globe globe"></i> <a href="https://personprofil.aau.dk/profil/101000" target="_blank" rel="noopener noreferrer">Frede Blaabjerg,Denmark</a><br>
-						<i class="wp-svg-globe globe"></i> <a href="https://www.linkedin.com/in/uwe-kaltenborn" target="_blank" rel="noopener noreferrer">Uwe Kaltenborn</a><br>
+						<i class="wp-svg-globe globe"></i> <a href="https://personprofil.aau.dk/profil/101000"  rel="noopener noreferrer">Frede Blaabjerg,Denmark</a><br>
+						<i class="wp-svg-globe globe"></i> <a href="https://www.linkedin.com/in/uwe-kaltenborn"  rel="noopener noreferrer">Uwe Kaltenborn</a><br>
 						<i class="wp-svg-globe globe"></i> Joachim Holtz<br>
 						<i class="wp-svg-globe globe"></i> Pragasen Pillay<br>
-						<i class="wp-svg-globe globe"></i><a href="https://www.ee.IITM.ac.in/PEDES2018/keynote-and-industry-speakers/" target="_blank" rel="noopener noreferrer"> Navaneeth Kumar</a><br>
+						<i class="wp-svg-globe globe"></i><a href="https://www.ee.IITM.ac.in/PEDES2018/keynote-and-industry-speakers/"  rel="noopener noreferrer"> Navaneeth Kumar</a><br>
 						<i class="wp-svg-globe globe"></i> Tomy Sebastian <br>
 						</div>
 						</li> -->
@@ -1151,34 +1456,34 @@
                             <h3 class="widget-title"><span>Important Dates</span></h3>
                             <div class="textwidget">
 
-                                <font color="#000000">Full paper submission opens:</font>
+                                <font color="#000000 ">Full paper submission opens:</font>
                                 <br> &nbsp; &nbsp;
                                 <i class="wp-svg-calendar-2 calendar-2"></i>
                                 <strong>&nbsp;06-01-2020</strong>
                                 <br>
 
-                                <font color="#000000">Full paper submission closes :</font><br> &nbsp; &nbsp;
+                                <font color="#000000 ">Full paper submission closes :</font><br> &nbsp; &nbsp;
                                 <i class="wp-svg-calendar-2 calendar-2"></i>
                                 <strong>&nbsp;29-02-2020</strong>
                                 <br>
 
-                                <font color="#000000">Acceptance Notification : </font>
+                                <font color="#000000 ">Acceptance Notification : </font>
                                 <br> &nbsp; &nbsp;
                                 <i class="wp-svg-calendar-2 calendar-2"></i>
                                 <strong>&nbsp;05 May 2020</strong>
                                 <br>
 
-                                <font color="#000000">Early Bird registration closes :</font><br> &nbsp; &nbsp;
+                                <font color="#000000 ">Early Bird registration closes :</font><br> &nbsp; &nbsp;
                                 <i class="wp-svg-calendar-2 calendar-2"></i>
                                 <strong>&nbsp;10 June 2020</strong>
                                 <br>
-                                <font color="#000000">Submission of final formated papers:</font>
+                                <font color="#000000 ">Submission of final formated papers:</font>
                                 <br> &nbsp; &nbsp;
                                 <i class="wp-svg-calendar-2 calendar-2"></i>
                                 <strong>&nbsp;25 June 2020</strong>
                                 <br>
 
-                                <font color="#000000">Conference Date :</font><br> &nbsp; &nbsp;
+                                <font color="#000000 ">Conference Date :</font><br> &nbsp; &nbsp;
                                 <i class="wp-svg-calendar-2 calendar-2"></i>
                                 <strong>&nbsp;10-11 July 2020</strong>
                                 <br>
@@ -1190,7 +1495,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div id="secondary" class="widget-area sidey" role="complementary">
 
                     <ul class="xoxo">
@@ -1201,20 +1505,6 @@
                                     <div> </div>
                                     <h1 align="center">
                                         <font size="4" color="FFFFFF">10-11 July 2020</font>
-                                    </h1>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <ul class="xoxo">
-                        <li id="text-3" class="widget-container widget_text">
-                            <div class="textwidget">
-                                <div style="background-color:#0f3758">
-                                    <h1 align="center"> <strong><font size="5" color="#f1c40f">Submit Your Paper</font></strong></h1>
-                                    <div> </div>
-                                    <h1 align="center">
-                                        <font size="4" color="#FFFFFF"><a href="https://easychair.org/conferences/?conf=icefeet2020 " target="_blank" style="color: white">Click Here</a></font>
                                     </h1>
                                 </div>
                             </div>
@@ -1263,10 +1553,7 @@
         <!-- #footer -->
 
     </div>
-
-
     </div>
-
     <link rel="stylesheet" href="../css/css_last.css">
     <!-- <link rel='stylesheet' id='nirvana-mobile-css'  href='https://www.ee.IITM.ac.in/PEDES2018/wp-content/themes/nirvana/styles/style-mobile.css?ver=1.3.3' type='text/css' media='all' /> -->
     <script type='text/javascript'>
@@ -1303,9 +1590,7 @@
         };
         /* ]]> */
     </script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <script type='text/javascript'>
         /* <![CDATA[ */
         var nirvana_settings = {
@@ -1323,17 +1608,13 @@
     <script type="text/javascript">
         document.addEventListener('wpcf7mailsent', function(event) {}, false);
     </script>
-
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.6.1/firebase-app.js"></script>
-
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="/__/firebase/7.6.1/firebase-analytics.js"></script>
-
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
-
 </body>
 
 </html>
