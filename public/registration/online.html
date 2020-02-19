@@ -824,6 +824,61 @@
             font-size: 42px;
         }
         
+        <style type="text/css">@-webkit-keyframes flash {
+            from,
+            50%,
+            to {
+                opacity: 1;
+            }
+            25%,
+            75% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes flash {
+            from,
+            50%,
+            to {
+                opacity: 1;
+            }
+            25%,
+            75% {
+                opacity: 0;
+            }
+        }
+        
+        .flash {
+            -webkit-animation-name: flash;
+            animation-name: flash;
+        }
+        
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        
+        .animated.infinite {
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <style>
         .widget-title,
         .widget-title a {
             font-size: 22px;
@@ -1065,6 +1120,8 @@
                             <hr>
                             <h4><strong><span style="color: #800000;">Registration </span></strong></h4>
                             <hr>
+                            <span class="animated flash infinite" style="color:blue;font-size:20px;text-shadow:0px 0px 25px;">Att accepted and presented papers will be uploaded in IEEExplore<br/>(Record No. 49149)</span>
+                            <hr>
                             <div></div>
                             <div class="gmail_default">
                                 <table border="1">
@@ -1260,7 +1317,21 @@
                             </div>
                         </li>
                     </ul>
-
+                    <ul class="xoxo">
+                        <li id="text-3" class="widget-container widget_text">
+                            <div class="textwidget">
+                                <div style="background-color:#0f3758">
+                                    <h1 align="center"> <strong><font size="5" color="#f1c40f">Technical Co-Sponsor</font></strong></h1>
+                                    <div> </div>
+                                    <h1 align="center">
+                                        <font size="4" color="#FFFFFF">
+                                            <p target="_blank" style="color: white">IEEE Kolkata</p>
+                                        </font>
+                                    </h1>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
 
                 </div>
 
